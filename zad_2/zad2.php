@@ -25,7 +25,9 @@
     ?>
 
 <p1>Задание 2</p1><br>
+
 <p1>Введите коэффициент a,b,c квадратного уравнения</p1>
+
 <form action="" method="GET">
     <label>
         <div class = "a-styler"> a </div>
@@ -64,6 +66,7 @@ switch(discriminate($a,$b,$c) !== null){
 
 }
 ?>
+
 <?php
 //    echo "Задание 3<br/>";
 //    echo "Файл существует и присутствует return<br/>";
@@ -81,8 +84,11 @@ switch(discriminate($a,$b,$c) !== null){
 //    $x = include("incl2.php");
 //    echo "Вывод: ", $x, "\n";
 ?>
+
 <p1>Задание 4</p1><br>
+
 <p1>Введите имя:</p1>
+
 <form action="" method="POST">
     <label>
         <div class = "a-styler"> name </div>
@@ -119,4 +125,5 @@ switch (genders($name)){
         margin-right: 10px;
     }
 </style>
+
 </body>
