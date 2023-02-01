@@ -12,16 +12,10 @@
 <?php
 $image_array = include __DIR__ . "/data.php";
 if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
-    $id = $_GET['id'];
-    foreach ($image_array as $item => $value) {
-        if ($item == $id) {
-            ?>
-            <img src="images/<?php echo $value ?>" alt="" height="400px;"
-                 style="display: block; margin-left: auto; margin-right: auto">
-            <?php
-            break;
-        }
-    }
+    $id = $_GET['id']; ?>
+    <img src="images/<?php echo $image_array[(int)$id] ?>" alt="" height="400px;"
+         style="display: block; margin-left: auto; margin-right: auto">
+    <?php
 } else {
     echo "Какая-то ошибка, повторите запрос позже";
 }
