@@ -8,12 +8,14 @@
     <title>PHP-1</title>
 </head>
 <body>
-<p>Задание 1(a,b)</p><br>
-<p>Введите 2 числа и знак, который вам нужен</p><br>
+
+<p>Задание 1(a,b)</p>
+Введите 2 числа и знак, который вам нужен
 
 <form action="script.php" method="GET">
     <label>
-        <input name = "a" type="number" value="<?php if(isset($_GET['a']) && is_numeric($_GET['a'])) echo $_GET['a']; else echo 0;?>">
+        <input name="a" type="number"
+               value="<?php if (isset($_GET['a']) && is_numeric($_GET['a'])) echo $_GET['a']; else echo 0; ?>">
     </label>
     <label>
         <select size="1" name="sign">
@@ -25,7 +27,8 @@
         </select>
     </label>
     <label>
-        <input name = "b" type="number" value="<?php if(isset($_GET['b']) && is_numeric($_GET['b'])) echo $_GET['b']; else echo 0;?>">
+        <input name="b" type="number"
+               value="<?php if (isset($_GET['b']) && is_numeric($_GET['b'])) echo $_GET['b']; else echo 0; ?>">
     </label>
     <input type="submit" value="=">
 </form>
