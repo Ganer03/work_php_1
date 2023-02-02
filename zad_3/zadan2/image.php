@@ -10,14 +10,16 @@
 <body>
 
 <?php
-$image_array = include __DIR__ . "/data.php";
-if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
-    $id = $_GET['id']; ?>
-    <img src="images/<?php echo $image_array[(int)$id] ?>" alt="" height="400px;"
-         style="display: block; margin-left: auto; margin-right: auto">
-    <?php
-} else {
-    echo "Какая-то ошибка, повторите запрос позже";
+if (is_readable(__DIR__ . "/data.php")) {
+    $image_array = include __DIR__ . "/data.php";
+    if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
+        $id = $_GET['id']; ?>
+        <img src="images/<?php echo $image_array[(int)$id] ?>" alt="" height="400px;"
+             style="display: block; margin-left: auto; margin-right: auto">
+        <?php
+    } else {
+        echo "Какая-то ошибка, повторите запрос позже";
+    }
 }
 ?>
 
