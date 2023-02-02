@@ -22,10 +22,10 @@
 </form>
 
 <?php
-if (is_readable("function.php")) {
+if (is_readable(__DIR__ . "/function.php")) {
     include __DIR__ . "/function.php";
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST['name']) && (int)$_POST['name'] === 0 && $_POST['name'] !== '0') {
-        $name = (string) $_POST['user'];
+        $name = (string)$_POST['user'];
         echo "Пол: ";
         switch (genders($name)) {
             case null:

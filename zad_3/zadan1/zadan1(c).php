@@ -37,7 +37,7 @@ $signed = ['*', '/', '+', '-', '%'];
     <input type="submit" value="=">
 
     <?php
-    if (is_readable("script.php")) {
+    if (is_readable(__DIR__ . "/operation.php")) {
         include __DIR__ . "/operation.php";
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $flag = true;

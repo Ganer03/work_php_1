@@ -33,7 +33,7 @@
 </form>
 
 <?php
-if (is_readable("function.php")) {
+if (is_readable(__DIR__ . "/function.php")) {
     include __DIR__ . "/function.php";
     if ($_SERVER['REQUEST_METHOD'] == 'GET' && (isset($_GET['a']) && is_numeric($_GET['a'])) && (isset($_GET['b']) && is_numeric($_GET['b'])) && (isset($_GET['c']) && is_numeric($_GET['c']))) {
         $a = (int)$_GET['a'];

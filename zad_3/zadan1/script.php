@@ -1,5 +1,5 @@
 <?php
-if (is_readable("script.php")) {
+if (is_readable(__DIR__ . "/operation.php")) {
     include __DIR__ . "/operation.php";
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         if (isset($_GET['a']) && isset($_GET['sign']) && isset($_GET['b']) && $_GET['a'] != "" && $_GET['b'] != "") {
